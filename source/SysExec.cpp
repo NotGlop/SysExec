@@ -47,7 +47,7 @@ void RunHttpServer(WCHAR** bin_path)
 	if (!wcscmp(*bin_path, L"-i")) {
 		WCHAR cur_path[MAX_PATH];
 		GetCurrentDirectory(MAX_PATH, cur_path);
-		swprintf_s(rbin_path, L"cmd /c \"start /d \"%s\" /b psexec.exe -s -i cmd.exe\"", cur_path);
+		swprintf_s(rbin_path, L"cmd /c \"start /d \"%s\" /b paexec.exe -s -i cmd.exe\"", cur_path);
 	} else {
 		WCHAR full_path[MAX_PATH] = { 0 };
 		GetFullPathName(*bin_path, MAX_PATH, full_path, NULL);
