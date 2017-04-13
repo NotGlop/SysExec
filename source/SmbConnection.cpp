@@ -56,20 +56,6 @@ void SmbConnection::ForgeSmbHeader(char* buffer, UCHAR command) {
 	memcpy(&buffer[30], &smb_hdr.MID, 2);
 }
 
-#include <iostream>
-#include <sstream>
-#include <iomanip>
-std::string hexStr(BYTE *data, int len)
-{
-	std::stringstream ss;
-	ss << std::hex;
-	for (int i(0); i < len; ++i) {
-		!(i % 8) ? ss << " " : ss << "";
-		!(i % 16) ? ss << endl : ss << "";
-		ss << std::setw(2) << std::setfill('0') << (int)data[i];
-	}
-	return ss.str();
-}
 
 void SmbConnection::SendAndReceivePacket(char* buffer, int length, char* packet_name)
 {
