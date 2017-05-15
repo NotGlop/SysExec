@@ -1,17 +1,12 @@
 #pragma once
 
 #include <iostream>
-#include <string.h>
 #include <winsock2.h>
 #include <Ws2tcpip.h>
 #define SECURITY_WIN32
 
 #pragma comment(lib, "Ws2_32.lib")
-#pragma comment(lib, "crypt32.lib")
-#pragma comment(lib, "dnsapi.lib")
-#pragma comment(lib, "secur32.lib")
 
-#include <sspi.h>
 #include "SmbConnection.h"
 
 #define LISTEN_PORT 8989
