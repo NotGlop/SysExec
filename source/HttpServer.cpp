@@ -1,7 +1,6 @@
 #include "stdafx.h"
 
 #include <atlenc.h>
-#include <atlstr.h>
 
 HttpServer::HttpServer()
 {
